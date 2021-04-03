@@ -1,9 +1,8 @@
-import { BankingAccount } from "./banking_account";
-import { DepositWithdrawal } from "./interfaces";
+import { Account, DepositWithdrawal } from "./interfaces";
 
 export class ATM implements DepositWithdrawal {
     
-    constructor(private account: BankingAccount) { }
+    constructor(private account: Account) { }
 
     deposit(amount: number): void {
         this.account.deposit(amount);
